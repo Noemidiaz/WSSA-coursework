@@ -5,6 +5,9 @@
 
 
 # Step 1: Install the "requests" Library using pip install
+# The requests module allows you to send HTTP requests using Python.The HTTP request returns a response data.
+
+
 import requests
 
 # Step 2: First, shuffle the deck and get the deck_id
@@ -29,7 +32,7 @@ for card in cards:
 # Checking if the user has drawn cards all of the same suit, a pair, triple, straight and congratulate the player for achieving those hands.
 
 
-# Step 5: Analyze the hand (check for pairs, triples, straight, flush)
+#Step 5: Analyze the hand (check for pairs, triples, straight, flush)
 values = [card['value'] for card in cards]
 suits = [card['suit'] for card in cards]
 
@@ -65,5 +68,13 @@ if is_straight(numeric_values):
     print("Congrats, you have a straight!")
 
 
+
 # REFERENCES:
-# 
+
+# API that simulates dealing a deck of cards: https://deckofcardsapi.com/
+
+# Example code: https://www.ciscopress.com/articles/article.asp?p=3192410&seqNum=4
+
+# import request module and use: https://realpython.com/python-requests/
+
+# requests module: https://www.w3schools.com/python/module_requests.asp
