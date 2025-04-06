@@ -2,9 +2,18 @@
 #Description:Write a program that retrieves the dataset for the "exchequer account (historical series)" from the CSO, and stores it into a file called "cso.json"
 # By Noemi Diaz
 
-import requests
+#Importing library
+import requests 
 
+# URL from the dataset in the website of CSO
 URL= "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/JSON-stat/2.0/en"
 
+# Getting data from CSO
 response= requests.get(URL)
-print (response.json())
+
+# If the request is successful, save the data in a cso.json file
+if response.ok:
+    with open("cso.json", "w", encoding="utf-8") as file:
+        file.write(response.text)
+else:
+    print("Failed to retrieve data:", response.status_code)
