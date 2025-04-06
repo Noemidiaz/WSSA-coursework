@@ -15,8 +15,7 @@ response= requests.get(URL)
 
 # If the request is successful, save the data in a cso.json file
 if response.ok:
-     if response.status_code == 200:
-        print("Success!")
+
     with open("cso.json", "w", encoding="utf-8") as file:
         file.write(response.text)
 else:
