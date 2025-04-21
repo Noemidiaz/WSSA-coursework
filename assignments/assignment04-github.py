@@ -3,8 +3,8 @@
 # By Noemi Diaz
 
 
-# Step 1: Install PyGithub in Python using terminal
-# pip install PyGithub
+# Step 1: Install PyGithub in Python using terminal (python -m pip install PyGithub)
+
 
 
 # Step 2: Create a Github Token
@@ -20,3 +20,5 @@ apikey = cfg["githubkey"]
 g = Github(apikey)
 for repo in g.get_user().get_repos():
  print(repo.name)
+
+ #
