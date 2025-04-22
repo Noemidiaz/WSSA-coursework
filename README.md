@@ -1,5 +1,12 @@
 # WSSA-coursework
+### Web Services and Apllications
 
-In this repository you can find two folders:
+![Alt text]()
+
+
+This repository is focused in the module Web Services and Applications.
+
+There are two folders:
+
 - assignments
--
+- Project
