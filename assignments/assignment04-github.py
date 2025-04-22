@@ -11,8 +11,13 @@
 
 # Step 3: Python code to access test.txt
 
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+
 from github import Github
-from config import config as cfg
+from assignments.config import config as cfg
 
 apikey = cfg["githubkey"]
  
